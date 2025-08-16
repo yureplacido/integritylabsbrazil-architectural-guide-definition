@@ -1,0 +1,50 @@
+# Maven
+target/
+!.mvn/wrapper/maven-wrapper.jar
+**/generated-sources/
+**/generated-test-sources/
+**/maven-status/
+**/maven-archiver/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+
+# Eclipse
+.project
+.classpath
+.settings/
+bin/
+
+# VS Code
+.vscode/
+
+# Arquivos de sistema
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Arquivos temporários
+*.tmp
+*.swp
+*.swo
+*.bak
+
+# Testes e relatórios
+surefire-reports/
+jacoco.exec
+
+# Dependências
+dependency-reduced-pom.xml
+
+# Arquivos de configuração pessoal
+local.properties
+
+# Arquivos de banco de dados em memória
+*.h2.db
+*.mv.db
