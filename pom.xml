@@ -8,7 +8,7 @@
     <packaging>pom</packaging>
     <name>ILB :: Architectural Guide Definition</name>
     <description>Architectural Guide Definition Bootstrap Parent</description>
-    <url>http://www.integritylabsbrazil.com</url>
+    <url>https://www.integritylabsbrazil.com</url>
     <!-- ## Profiles
        # analysis -> executa a análise estática do código fonte e analisa as vulnerabilidades
        # docker   -> gera as imagens docker no modo local
@@ -80,7 +80,8 @@
     </properties>
 
     <modules>
-        <module>rest-api-web-guide-definition</module>
+        <module>rest-api-web</module>
+        <module>utility-tool</module>
     </modules>
 
     <dependencyManagement>
@@ -146,9 +147,16 @@
             <!-- CHILDREN MODULES -->
             <dependency>
                 <groupId>com.integritylabsbrazil</groupId>
-                <artifactId>rest-api-web-guide-definition</artifactId>
+                <artifactId>rest-api-web</artifactId>
                 <version>${project.version}</version>
             </dependency>
+
+            <dependency>
+                <groupId>com.integritylabsbrazil</groupId>
+                <artifactId>utility-tool</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
             <!-- END CHILDREN MODULES -->
 
             <!-- ZALANDO -->
@@ -748,4 +756,30 @@
             </plugins>
         </pluginManagement>
     </build>
+
+    <repositories>
+        <repository>
+            <id>central</id>
+            <url>https://repo.maven.apache.org/maven2/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>central</id>
+            <url>https://repo.maven.apache.org/maven2/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
 </project>
